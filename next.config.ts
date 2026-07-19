@@ -1,0 +1,13 @@
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  turbopack: { root: process.cwd() },
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "*.cdninstagram.com" },
+      { protocol: "https", hostname: "images.microcms-assets.io" },
+    ],
+  },
+};
+
+export default nextConfig;

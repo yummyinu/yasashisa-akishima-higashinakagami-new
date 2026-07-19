@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Breadcrumb, PageHero, ReservationCTA, SectionHeading } from "@/components/UI";
+import { treatments } from "@/data/site";
+export const metadata: Metadata = { title: "施術・メニュー", description: "整体、骨盤・姿勢矯正、首・肩・腰のお悩みなど、施術内容をご案内します。" };
+export default function TreatmentPage() { return <><PageHero eyebrow="TREATMENT" title="施術・メニュー" lead="痛みの場所だけでなく、身体全体の状態や日常の動き方まで確認して施術をご提案します。" /><Breadcrumb current="施術・メニュー" /><section className="section"><div className="container"><SectionHeading eyebrow="MENU" title="状態に合わせた施術" /><div className="menu-list">{treatments.map((item, i) => <article key={item.title}><Image src={item.image} alt={`${item.title}の施術イメージ`} width={700} height={520} /><div><span>0{i + 1}</span><h2>{item.title}</h2><p>{item.text}</p><ul><li>状態の確認とカウンセリング</li><li>無理のない施術</li><li>セルフケアのアドバイス</li></ul></div></article>)}</div></div></section><section className="section pale"><div className="container"><SectionHeading eyebrow="INSURANCE" title="保険施術について" lead="原因が明確な急性のケガなど、症状によって健康保険が適用される場合があります。適用可否は状態を確認したうえでご案内します。" /><p className="note">施術内容・料金は、お身体の状態や保険適用の有無によって異なります。来院時に必ず事前にご説明します。</p></div></section><ReservationCTA /></>; }
