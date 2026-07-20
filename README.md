@@ -53,3 +53,29 @@ npm run build
 
 - Vercelプロジェクト：`yasashisa-akishima-higashinakagami-new`
 - 本番URL：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app`
+
+## Vercel Web Analytics / Speed Insights
+
+この設定は「やさしさ 昭島東中神整骨院」の新規Vercelプロジェクト `yasashisa-akishima-higashinakagami-new` 専用です。ほかの店舗や既存プロジェクトには導入していません。
+
+- Web Analytics：`@vercel/analytics`
+- Speed Insights：`@vercel/speed-insights`
+- 実装場所：`src/app/layout.tsx`
+- 配置数：ルートレイアウトにそれぞれ1回
+- 計測対象：トップ、初めての方へ、施術・メニュー、院内紹介、アクセス、FAQ、採用情報、お知らせ、プライバシーポリシーを含む全ページ
+
+Vercel管理画面でプロジェクトを選択し、サイドバーの「Analytics」でページビュー、訪問者、ページ、参照元、端末、ブラウザ、地域を確認します。「Speed Insights」ではLCP、INP、CLSなどのCore Web Vitalsを確認します。データ反映には時間がかかる場合があります。
+
+Custom EventsはProまたはEnterprise向けのため、利用プランを明確に確認できるまでは実装していません。標準ページビューだけを送信し、氏名、電話番号、メールアドレス、症状、予約内容などの個人情報は送信しません。将来Custom EventsやWeb Analytics Plusを有効化する場合は、Vercelの料金と利用上限を確認してから導入してください。
+
+### UTMパラメータ付きURL
+
+アプリ側ではUTMパラメータを削除しません。canonical URLにはUTMパラメータを含めません。
+
+- Instagramプロフィール：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=profile`
+- Instagram投稿：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=post`
+- Googleビジネスプロフィール：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`
+- QRコード・チラシ：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=flyer&utm_medium=qr&utm_campaign=clinic_promotion`
+- 営業資料：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=sales_material&utm_medium=qr&utm_campaign=clinic_website`
+
+UTM専用パネルはVercel Web Analytics PlusまたはEnterpriseで提供されます。標準プランで利用できない場合でも、UTM付きURLはそのままサイトへ到達します。
