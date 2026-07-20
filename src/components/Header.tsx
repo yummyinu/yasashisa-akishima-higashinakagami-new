@@ -13,7 +13,7 @@ export function Header() {
     <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="brand" aria-label="やさしさ 昭島東中神整骨院 トップページ">
-          <Image src="/images/yasashisa/yasashisa-wordmark.jpg" alt="やさしさ 昭島東中神整骨院" width={454} height={124} priority />
+          <Image src="/images/yasashisa/yasashisa-wordmark-hd.png" alt="やさしさ 昭島東中神整骨院" width={2178} height={722} priority />
         </Link>
         <nav className="desktop-nav" aria-label="メインナビゲーション">
           {navigation.map((item) => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined}>{item.label}</Link>)}
