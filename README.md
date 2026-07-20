@@ -52,7 +52,7 @@ npm run build
 ## 公開先
 
 - Vercelプロジェクト：`yasashisa-akishima-higashinakagami-new`
-- 本番URL：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app`
+- 本番URL：`https://www.yasashisaseikotuin.com`
 
 ## Vercel Web Analytics / Speed Insights
 
@@ -72,10 +72,10 @@ Custom EventsはProまたはEnterprise向けのため、利用プランを明確
 
 アプリ側ではUTMパラメータを削除しません。canonical URLにはUTMパラメータを含めません。
 
-- Instagramプロフィール：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=profile`
-- Instagram投稿：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=instagram&utm_medium=social&utm_campaign=post`
-- Googleビジネスプロフィール：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`
-- QRコード・チラシ：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=flyer&utm_medium=qr&utm_campaign=clinic_promotion`
-- 営業資料：`https://yasashisa-akishima-higashinakagami-eosin.vercel.app/?utm_source=sales_material&utm_medium=qr&utm_campaign=clinic_website`
+- Instagramプロフィール：`https://www.yasashisaseikotuin.com/?utm_source=instagram&utm_medium=social&utm_campaign=profile`
+- Instagram投稿：`https://www.yasashisaseikotuin.com/?utm_source=instagram&utm_medium=social&utm_campaign=post`
+- Googleビジネスプロフィール：`https://www.yasashisaseikotuin.com/?utm_source=google&utm_medium=organic&utm_campaign=business_profile`
+- QRコード・チラシ：`https://www.yasashisaseikotuin.com/?utm_source=flyer&utm_medium=qr&utm_campaign=clinic_promotion`
+- 営業資料：`https://www.yasashisaseikotuin.com/?utm_source=sales_material&utm_medium=qr&utm_campaign=clinic_website`
 
 UTM専用パネルはVercel Web Analytics PlusまたはEnterpriseで提供されます。標準プランで利用できない場合でも、UTM付きURLはそのままサイトへ到達します。
