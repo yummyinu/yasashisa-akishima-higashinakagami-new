@@ -422,4 +422,3 @@ p, li, dd, figcaption { text-wrap: pretty; }
 }
 
 :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
-
