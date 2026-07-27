@@ -12,7 +12,7 @@ export function Footer() {
           </div>
           <p>{siteConfig.address}</p>
           <p><strong>東中神駅南口から徒歩4分</strong>／駐車場5台</p>
-          <a className="button button-orange" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
+          <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
         </div>
         <div>
           <p className="footer-label">診療時間</p>
@@ -34,3 +34,4 @@ export function Footer() {
     </footer>
   );
 }
+

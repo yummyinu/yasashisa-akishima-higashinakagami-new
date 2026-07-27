@@ -33,7 +33,7 @@ export function ReservationCTA() {
           <p>お身体の状態を丁寧に伺い、無理のない施術をご提案します。</p>
         </div>
         <div className="reservation-actions">
-          <a className="button button-orange" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">
+          <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">
             <span>24時間受付</span>Webで空き状況を見る ↗
           </a>
           <Link className="button button-white" href="/access">アクセスを確認する</Link>
@@ -46,3 +46,4 @@ export function ReservationCTA() {
 export function Breadcrumb({ current }: { current: string }) {
   return <nav className="breadcrumb container" aria-label="パンくず"><Link href="/">トップ</Link><span aria-hidden="true">›</span><span>{current}</span></nav>;
 }
+

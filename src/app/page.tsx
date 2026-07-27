@@ -25,7 +25,7 @@ export default function Home() {
             <h1>つらいところを聞いて、身体の動きを見てから施術します</h1>
             <p>お悩みの背景まで丁寧に伺い、今の状態と施術方針を分かりやすくお伝えします。初めての方も安心してご相談ください。</p>
             <div className="hero-actions">
-              <a className="button button-orange" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
+              <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
               <Link className="button button-outline" href="/first">初めての方へ</Link>
             </div>
           </div>
@@ -133,3 +133,4 @@ export default function Home() {
     </>
   );
 }
+
