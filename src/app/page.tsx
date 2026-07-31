@@ -5,14 +5,15 @@ import { ReservationCTA, SectionHeading } from "@/components/UI";
 import { concerns, faqs, gallery, treatments } from "@/data/site";
 import { recruitData } from "@/data/recruit";
 import { siteConfig } from "@/config/site";
+import { BookIcon, BuildingIcon, CalendarIcon, ClockIcon, HandIcon, MapPinIcon, MessageIcon, SmartphoneIcon, UsersIcon } from "@/components/Icons";
 
 const quickLinks = [
-  { href: "/first", icon: "初", title: "初めての方へ", text: "来院から施術まで", image: "/images/yasashisa/counseling.jpg" },
-  { href: "/treatment", icon: "施", title: "施術・メニュー", text: "症状・お悩み別", image: "/images/yasashisa/back-treatment.jpg" },
-  { href: "/gallery", icon: "院", title: "院内紹介", text: "明るく清潔な院内", image: "/images/yasashisa/clinic-original.jpg" },
-  { href: "/access", icon: "駅", title: "アクセス", text: "東中神駅からの道順", image: "/images/yasashisa/kids-space.jpg" },
-  { href: "/faq", icon: "問", title: "よくある質問", text: "初めての方も安心", image: "/images/yasashisa/neck-treatment.jpg" },
-  { href: "/recruit", icon: "採", title: "採用情報", text: "一緒に働く仲間を募集", image: "/images/yasashisa/stretch-treatment.jpg" },
+  { href: "/first", Icon: BookIcon, title: "初めての方へ", text: "来院から施術まで", image: "/images/yasashisa/counseling.jpg" },
+  { href: "/treatment", Icon: HandIcon, title: "施術・メニュー", text: "症状・お悩み別", image: "/images/yasashisa/back-treatment.jpg" },
+  { href: "/gallery", Icon: BuildingIcon, title: "院内紹介", text: "明るく清潔な院内", image: "/images/yasashisa/clinic-original.jpg" },
+  { href: "/access", Icon: MapPinIcon, title: "アクセス", text: "東中神駅からの道順", image: "/images/yasashisa/kids-space.jpg" },
+  { href: "/faq", Icon: MessageIcon, title: "よくある質問", text: "初めての方も安心", image: "/images/yasashisa/neck-treatment.jpg" },
+  { href: "/recruit", Icon: UsersIcon, title: "採用情報", text: "一緒に働く仲間を募集", image: "/images/yasashisa/stretch-treatment.jpg" },
 ] as const;
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="container hero-layout">
           <div className="hero-content">
             <p className="hero-kicker">地域の皆さまの身体に、やさしく向き合う整骨院</p>
-            <h1>つらいところを聞いて、身体の動きを見てから施術します</h1>
+            <h1><span>つらいところを聞いて、</span><span>身体の動きを見てから</span><span>施術します</span></h1>
             <p>お悩みの背景まで丁寧に伺い、今の状態と施術方針を分かりやすくお伝えします。初めての方も安心してご相談ください。</p>
             <div className="hero-actions">
               <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
@@ -38,10 +39,10 @@ export default function Home() {
 
       <section className="clinic-facts" aria-label="医院の特徴">
         <div className="container facts-grid">
-          <article><span className="fact-icon" aria-hidden="true">●</span><div><small>最寄り駅</small><strong>徒歩4分</strong><p>東中神駅南口</p></div></article>
-          <article><span className="fact-icon" aria-hidden="true">◷</span><div><small>診療時間</small><strong>20時まで</strong><p>9:00〜12:30／15:00〜20:00</p></div></article>
-          <article><span className="fact-icon" aria-hidden="true">✓</span><div><small>ご予約</small><strong>当日予約</strong><p>空き状況をご確認ください</p></div></article>
-          <article><span className="fact-icon" aria-hidden="true">□</span><div><small>Web予約</small><strong>24時間受付</strong><p>スマートフォンから簡単</p></div></article>
+          <article><span className="fact-icon"><MapPinIcon /></span><div><small>東中神駅南口</small><strong>徒歩4分</strong></div></article>
+          <article><span className="fact-icon"><ClockIcon /></span><div><small>受付時間</small><strong>20時まで</strong><p>午前9時から受付</p></div></article>
+          <article><span className="fact-icon"><CalendarIcon /></span><div><small>当日予約</small><strong>空き状況を確認</strong></div></article>
+          <article><span className="fact-icon"><SmartphoneIcon /></span><div><small>Web予約</small><strong>24時間受付</strong></div></article>
         </div>
       </section>
 
@@ -49,9 +50,9 @@ export default function Home() {
         <div className="container">
           <SectionHeading eyebrow="メニュー案内" title="知りたい情報をすぐに見つけられます" align="center" />
           <div className="quick-grid">
-            {quickLinks.map((item) => (
+            {quickLinks.map(({ Icon, ...item }) => (
               <Link key={item.href} href={item.href} className="quick-card">
-                <div className="quick-card-title"><span aria-hidden="true">{item.icon}</span><div><strong>{item.title}</strong><small>{item.text}</small></div><b aria-hidden="true">›</b></div>
+                <div className="quick-card-title"><span><Icon /></span><div><strong>{item.title}</strong><small>{item.text}</small></div><b aria-hidden="true">›</b></div>
                 <div className="quick-card-image"><Image src={item.image} alt="" fill sizes="(max-width: 700px) 50vw, 33vw" /></div>
               </Link>
             ))}

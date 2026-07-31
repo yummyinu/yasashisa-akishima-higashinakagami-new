@@ -16,11 +16,11 @@ export function Footer() {
         </div>
         <div>
           <p className="footer-label">診療時間</p>
-          <div className="footer-hours">
-            <p><span>午前</span>9:00〜12:30</p>
-            <p><span>午後</span>15:00〜20:00</p>
-            <p><span>定休日</span>年末年始</p>
-          </div>
+          <dl className="footer-hours">
+            <div><dt>午前</dt><dd>9:00〜12:30</dd></div>
+            <div><dt>午後</dt><dd>15:00〜20:00</dd></div>
+            <div><dt>定休日</dt><dd>年末年始</dd></div>
+          </dl>
         </div>
         <nav aria-label="フッターナビゲーション">
           <Link href="/">トップページ</Link>

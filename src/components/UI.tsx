@@ -34,7 +34,7 @@ export function ReservationCTA() {
         </div>
         <div className="reservation-actions">
           <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">
-            <span>24時間受付</span>Webで空き状況を見る ↗
+            <span className="button-kicker">24時間受付</span><span>Webで空き状況を見る <span aria-hidden="true">↗</span></span>
           </a>
           <Link className="button button-white" href="/access">アクセスを確認する</Link>
         </div>
@@ -43,7 +43,8 @@ export function ReservationCTA() {
   );
 }
 
-export function Breadcrumb({ current }: { current: string }) {
-  return <nav className="breadcrumb container" aria-label="パンくず"><Link href="/">トップ</Link><span aria-hidden="true">›</span><span>{current}</span></nav>;
+export function Breadcrumb({ current, path }: { current: string; path: string }) {
+  const jsonLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "トップ", item: siteConfig.url }, { "@type": "ListItem", position: 2, name: current, item: `${siteConfig.url}${path}` }] };
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} /><nav className="breadcrumb container" aria-label="パンくず"><Link href="/">トップ</Link><span aria-hidden="true">›</span><span aria-current="page">{current}</span></nav></>;
 }
 
