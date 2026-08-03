@@ -23,7 +23,7 @@ export default function Home() {
         <div className="container hero-layout">
           <div className="hero-content">
             <p className="hero-kicker">地域の皆さまの身体に、やさしく向き合う整骨院</p>
-            <h1><span>つらいところを聞いて、</span><span>身体の動きを見てから</span><span>施術します</span></h1>
+            <h1>つらいところを聞いて、身体の動きを見てから施術します</h1>
             <p>お悩みの背景まで丁寧に伺い、今の状態と施術方針を分かりやすくお伝えします。初めての方も安心してご相談ください。</p>
             <div className="hero-actions">
               <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>

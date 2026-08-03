@@ -85,7 +85,7 @@ export function Header() {
       {open && <button className="menu-backdrop" type="button" aria-label="メニューを閉じる" onClick={closeMenu} />}
       <nav ref={menuRef} id="mobile-menu" className={`mobile-menu ${open ? "is-open" : ""}`} aria-label="スマートフォンメニュー" aria-hidden={!open}>
         <Link href="/" onClick={closeMenu}>トップページ</Link>
-        {navigation.map((item) => <Link key={item.href} href={item.href} onClick={closeMenu}>{item.label}</Link>)}
+        {navigation.map((item) => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined} onClick={closeMenu}>{item.label}</Link>)}
         <a href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約（外部サイト）</a>
       </nav>
     </header>
