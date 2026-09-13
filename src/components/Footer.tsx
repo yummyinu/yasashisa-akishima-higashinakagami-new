@@ -8,10 +8,12 @@ export function Footer() {
       <div className="container footer-main">
         <div className="footer-clinic">
           <div className="footer-logo-wrap">
-            <Image className="footer-logo" src="/images/yasashisa/yasashisa-wordmark-hd.png" alt="やさしさ 昭島東中神整骨院" width={2178} height={722} />
+            <Image className="footer-logo" src="/images/yasashisa/yasashisa-whale-logo.jpg" alt="" width={120} height={120} />
+            <span className="footer-brand-name">やさしさ 昭島東中神整骨院</span>
           </div>
           <p>{siteConfig.address}</p>
           <p><strong>東中神駅南口から徒歩4分</strong>／駐車場5台</p>
+          <p><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></p>
           <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
         </div>
         <div>

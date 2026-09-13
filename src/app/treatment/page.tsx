@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb, PageHero, ReservationCTA, SectionHeading } from "@/components/UI";
 import { treatments } from "@/data/site";
-export const metadata: Metadata = { title: "施術・メニュー", description: "整体、骨盤・姿勢矯正、首・肩・腰のお悩みなど、施術内容をご案内します。", alternates: { canonical: "/treatment" } };
+export const metadata: Metadata = { title: "施術・メニュー", description: "やさしさ 昭島東中神整骨院の施術メニューです。全身整体、骨盤・姿勢矯正、首・肩・腰のお悩みなど、施術内容をご案内します。", alternates: { canonical: "/treatment" } };
 const menuDetails = [
   ["身体全体のつらさやバランスが気になる方", "姿勢や動き、つらさが出る場面を確認します", "身体全体の状態を見ながら無理のない施術をご提案します"],
   ["骨盤まわりや日常姿勢が気になる方", "普段の姿勢や身体の使い方を確認します", "一人ひとりの状態に合わせて進めます"],

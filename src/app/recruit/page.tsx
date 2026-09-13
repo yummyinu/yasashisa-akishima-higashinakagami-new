@@ -3,11 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb, SectionHeading } from "@/components/UI";
 import { recruitData as r } from "@/data/recruit";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "株式会社フチ 採用情報",
   description: "株式会社フチでは、やさしさ 昭島東中神整骨院で働く柔道整復師・施術者を募集しています。新卒・中途・未経験相談可。",
   alternates: { canonical: "/recruit" },
+};
+
+const datePosted = "2026-09-13";
+const validThrough = "2026-12-12";
+const jobPostingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  title: r.position,
+  description: "整骨院業務全般、患者様の状態確認と問診、指圧・矯正などの施術、通院計画の説明と日常生活のアドバイス、受付・接客・院内業務を担当していただきます。新卒・中途・未経験相談可で、技術と接客を段階的に学べる研修制度があります。",
+  identifier: { "@type": "PropertyValue", name: "株式会社フチ", value: "yasashisa-higashinakagami-recruit" },
+  datePosted,
+  validThrough,
+  employmentType: "FULL_TIME",
+  hiringOrganization: { "@type": "Organization", name: "株式会社フチ", sameAs: siteConfig.url },
+  jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", streetAddress: "玉川町3-18-13", addressLocality: "昭島市", addressRegion: "東京都", postalCode: "196-0034", addressCountry: "JP" } },
+  baseSalary: { "@type": "MonetaryAmount", currency: "JPY", value: { "@type": "QuantitativeValue", minValue: 250000, maxValue: 600000, unitText: "MONTH" } },
 };
 
 const people = [
@@ -24,12 +41,13 @@ const people = [
 const recruitFaqs = [
   { q: "新卒や実務未経験でも応募できますか？", a: "新卒・中途を問わず、未経験の方もご相談いただけます。技術と接客を段階的に学ぶ研修を用意しています。" },
   { q: "どのような研修がありますか？", a: "指圧・矯正・身体に関する知識に加え、問診、通院指導、挨拶、接客、コミュニケーションを学びます。" },
-  { q: "院内見学や応募はできますか？", a: "応募・院内見学の受付窓口は現在準備中です。受付開始後、このページでご案内します。" },
+  { q: "院内見学や応募はできますか？", a: "お電話またはInstagramのDMからご相談・お申し込みいただけます。院内見学のご希望もお気軽にお問い合わせください。" },
 ];
 
 export default function RecruitPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingJsonLd).replace(/</g, "\\u003c") }} />
       <section className="recruit-hero">
         <div className="container">
           <p className="eyebrow light">株式会社フチ 採用情報</p>
@@ -150,7 +168,11 @@ export default function RecruitPage() {
           <div>
             <p className="eyebrow">応募・院内見学</p>
             <h2>応募受付について</h2>
-            <p>応募・院内見学の受付窓口は現在準備中です。公開まで今しばらくお待ちください。</p>
+            <p>お電話またはInstagramのDMからご相談・お申し込みいただけます。院内見学のご希望もお気軽にお問い合わせください。</p>
+          </div>
+          <div className="reservation-actions">
+            <a className="button button-reserve" href={`tel:${siteConfig.phone}`}><span className="button-kicker">お電話でのご相談</span><span>{siteConfig.phone}</span></a>
+            <a className="button button-white" href={siteConfig.instagram.profileUrl} target="_blank" rel="noopener noreferrer">InstagramのDMで相談する ↗</a>
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { InstagramSection } from "@/components/instagram/InstagramSection";
@@ -6,6 +7,11 @@ import { concerns, faqs, gallery, treatments } from "@/data/site";
 import { recruitData } from "@/data/recruit";
 import { siteConfig } from "@/config/site";
 import { BookIcon, BuildingIcon, CalendarIcon, ClockIcon, HandIcon, MapPinIcon, MessageIcon, SmartphoneIcon, UsersIcon } from "@/components/Icons";
+
+export const metadata: Metadata = {
+  description: "昭島市・東中神駅南口から徒歩4分の整骨院「やさしさ 昭島東中神整骨院」。全身整体・骨盤矯正・首肩腰の施術に対応し、Web予約で24時間受付しています。",
+  alternates: { canonical: "/" },
+};
 
 const quickLinks = [
   { href: "/first", Icon: BookIcon, title: "初めての方へ", text: "来院から施術まで", image: "/images/yasashisa/counseling.jpg" },
@@ -109,7 +115,7 @@ export default function Home() {
         <div className="container access-grid">
           <div>
             <SectionHeading eyebrow="アクセス" title="東中神駅南口から徒歩4分" lead="駅から近く、院の斜向かいには5台分の駐車場もあります。お仕事帰りやお子さま連れでも通いやすい環境です。" />
-            <div className="access-summary"><p><strong>所在地</strong>{siteConfig.address}</p><p><strong>診療時間</strong>9:00〜12:30／15:00〜20:00</p><p><strong>定休日</strong>年末年始</p></div>
+            <div className="access-summary"><p><strong>所在地</strong>{siteConfig.address}</p><p><strong>電話番号</strong><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></p><p><strong>診療時間</strong>9:00〜12:30／15:00〜20:00</p><p><strong>定休日</strong>年末年始</p></div>
             <div className="inline-actions"><Link className="button" href="/access">アクセス詳細</Link><a className="button button-outline" href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer">Googleマップ ↗</a></div>
           </div>
           <Image src="/images/yasashisa/clinic-original.jpg" alt="やさしさ 昭島東中神整骨院の院内" width={720} height={540} />

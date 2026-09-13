@@ -50,11 +50,13 @@ export function Header() {
           <li>東中神駅南口から徒歩4分</li>
           <li>受付 9:00〜12:30／15:00〜20:00</li>
           <li>駐車場5台</li>
+          <li><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></li>
         </ul>
       </div>
       <div className="header-inner">
         <Link href="/" className="brand" aria-label="やさしさ 昭島東中神整骨院 トップページ" onClick={closeMenu}>
-          <Image src="/images/yasashisa/yasashisa-wordmark-hd.png" alt="やさしさ 昭島東中神整骨院" width={2178} height={722} priority />
+          <Image className="brand-mark" src="/images/yasashisa/yasashisa-whale-logo.jpg" alt="" width={120} height={120} priority />
+          <span className="brand-name">やさしさ<br />昭島東中神整骨院</span>
         </Link>
         <nav className="desktop-nav" aria-label="メインナビゲーション">
           {navigation.map((item) => (
