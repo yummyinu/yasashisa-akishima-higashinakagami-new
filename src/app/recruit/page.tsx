@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Breadcrumb, SectionHeading } from "@/components/UI";
+import { Ja } from "@/components/Ja";
 import { recruitData as r } from "@/data/recruit";
 import { siteConfig } from "@/config/site";
 
@@ -51,8 +52,8 @@ export default function RecruitPage() {
       <section className="recruit-hero">
         <div className="container">
           <p className="eyebrow light">株式会社フチ 採用情報</p>
-          <h1>好きで溢れる世界を、仲間とつくる。</h1>
-          <p>やりたいことを、やりたい人と、全力で楽しむ。株式会社フチは、一人ひとりの個性と挑戦を大切にする会社です。</p>
+          <h1><Ja>好きで溢れる世界を、仲間とつくる。</Ja></h1>
+          <p><Ja>やりたいことを、やりたい人と、全力で楽しむ。株式会社フチは、一人ひとりの個性と挑戦を大切にする会社です。</Ja></p>
           <a className="button button-white" href="#requirements">募集要項を見る</a>
         </div>
       </section>
@@ -62,9 +63,9 @@ export default function RecruitPage() {
         <div className="container first-intro recruit-about">
           <div>
             <SectionHeading eyebrow="会社について" title="株式会社フチについて" />
-            <p>株式会社フチは、「好き嫌いで仕事をする」というユニークな価値観を大切にし、本当にやりたいことを、信頼できる仲間とともに形にしていく企業です。</p>
-            <p>現在は整骨院事業を2店舗展開しながら、今後は飲食や建築など、分野にとらわれず、興味や人との縁を大切に事業展開していきます。</p>
-            <p>私たちは「人ありき」の会社です。経歴や年齢だけではなく、「この人と一緒に働きたいと思えるか」を大切にしています。</p>
+            <p><Ja>株式会社フチは、「好き嫌いで仕事をする」というユニークな価値観を大切にし、本当にやりたいことを、信頼できる仲間とともに形にしていく企業です。</Ja></p>
+            <p><Ja>現在は整骨院事業を2店舗展開しながら、今後は飲食や建築など、分野にとらわれず、興味や人との縁を大切に事業展開していきます。</Ja></p>
+            <p><Ja>私たちは「人ありき」の会社です。経歴や年齢だけではなく、「この人と一緒に働きたいと思えるか」を大切にしています。</Ja></p>
           </div>
           <Image src="/images/yasashisa/counseling.jpg" alt="やさしさ 昭島東中神整骨院で患者様と向き合うスタッフ" width={700} height={520} sizes="(max-width: 760px) 100vw, 50vw" />
         </div>
@@ -74,13 +75,13 @@ export default function RecruitPage() {
         <div className="container">
           <SectionHeading eyebrow="大切にする価値観" title="好き嫌いで仕事をする" lead="自分の心が動くことを大切にし、信頼できる仲間と一緒に形にしていく。自由な発想と責任ある挑戦が、フチの仕事です。" />
           <div className="recruit-story">
-            <p>やりたいことがあれば、社内で提案し、仲間と一緒に実現していける環境があります。</p>
-            <p>信頼できる仲間がいるからこそ、自由な発想や新しい挑戦が自然と生まれます。</p>
+            <p><Ja>やりたいことがあれば、社内で提案し、仲間と一緒に実現していける環境があります。</Ja></p>
+            <p><Ja>信頼できる仲間がいるからこそ、自由な発想や新しい挑戦が自然と生まれます。</Ja></p>
           </div>
           <div className="stats">
-            <article><strong>2店舗</strong><span>整骨院を展開</span></article>
-            <article><strong>70名以上</strong><span>1店舗・1日平均来院数</span></article>
-            <article><strong>新しい事業へ</strong><span>飲食や建築など、分野を越えた挑戦</span></article>
+            <article><strong>2店舗</strong><span><Ja>整骨院を展開</Ja></span></article>
+            <article><strong>70名以上</strong><span><Ja>1店舗・1日平均来院数</Ja></span></article>
+            <article><strong>新しい事業へ</strong><span><Ja>飲食や建築など、分野を越えた挑戦</Ja></span></article>
           </div>
         </div>
       </section>
@@ -89,12 +90,12 @@ export default function RecruitPage() {
         <div className="container recruit-split">
           <div>
             <SectionHeading eyebrow="整骨院事業" title="患者様を心から元気にする仕事" lead="技術だけでなく、状態を丁寧に伺い、分かりやすく説明する接客も大切にしています。" />
-            <ul className="check-list">{r.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="check-list">{r.responsibilities.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul>
           </div>
           <div className="recruit-opportunity">
             <p className="eyebrow">フチで実現できること</p>
-            <h2>施術者の先にも、挑戦できる道があります</h2>
-            <p>施術や接客の力を磨きながら、将来の独立や経営、新しい事業の提案にも挑戦できます。やりたいことを、仲間と一緒に形にしていける会社です。</p>
+            <h2><Ja>施術者の先にも、挑戦できる道があります</Ja></h2>
+            <p><Ja>施術や接客の力を磨きながら、将来の独立や経営、新しい事業の提案にも挑戦できます。やりたいことを、仲間と一緒に形にしていける会社です。</Ja></p>
           </div>
         </div>
       </section>
@@ -102,8 +103,8 @@ export default function RecruitPage() {
       <section className="section pale">
         <div className="container">
           <SectionHeading eyebrow="歓迎する人物像" title="こんな方を歓迎します" />
-          <div className="people-grid">{people.map((person) => <div key={person}>{person}</div>)}</div>
-          <p className="support-copy">今は明確な目標がなくても、仲間との仕事やさまざまな経験を通じて、自分のやりたいことを見つけていけます。</p>
+          <div className="people-grid">{people.map((person) => <div key={person}><Ja>{person}</Ja></div>)}</div>
+          <p className="support-copy"><Ja>今は明確な目標がなくても、仲間との仕事やさまざまな経験を通じて、自分のやりたいことを見つけていけます。</Ja></p>
         </div>
       </section>
 
@@ -111,8 +112,8 @@ export default function RecruitPage() {
         <div className="container">
           <SectionHeading eyebrow="研修・教育制度" title="技術と接客、両方を学ぶ" lead="一人ひとりの経験に合わせ、施術技術と患者様との向き合い方を段階的に学びます。" />
           <div className="training-groups">
-            <section><h3>技術研修</h3><ul>{r.training.slice(0, 5).map((item) => <li key={item}>{item}</li>)}</ul></section>
-            <section><h3>接客研修</h3><ul>{r.training.slice(5).map((item) => <li key={item}>{item}</li>)}</ul></section>
+            <section><h3>技術研修</h3><ul>{r.training.slice(0, 5).map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></section>
+            <section><h3>接客研修</h3><ul>{r.training.slice(5).map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></section>
           </div>
         </div>
       </section>
@@ -121,11 +122,11 @@ export default function RecruitPage() {
         <div className="container recruit-split">
           <div>
             <SectionHeading eyebrow="働く環境" title="幅広い経験を積める院" />
-            <ul className="check-list">{r.workplace.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="check-list">{r.workplace.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul>
           </div>
           <div>
             <SectionHeading eyebrow="福利厚生" title="挑戦を支える制度" />
-            <ul className="benefit-list">{r.benefits.map((item) => <li key={item}>{item}</li>)}</ul>
+            <ul className="benefit-list">{r.benefits.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul>
           </div>
         </div>
       </section>
@@ -134,12 +135,12 @@ export default function RecruitPage() {
         <div className="container">
           <SectionHeading eyebrow="求人条件" title="募集要項" />
           <dl className="requirements">
-            <div><dt>職種</dt><dd>{r.position}</dd></div>
-            <div><dt>雇用形態</dt><dd>{r.employment}（{r.categories.join("・")}）</dd></div>
-            <div><dt>給与</dt><dd><strong>{r.salary}</strong><ul>{r.salaryNotes.map((item) => <li key={item}>{item}</li>)}</ul></dd></div>
-            <div><dt>勤務時間</dt><dd><ul>{r.hours.map((item) => <li key={item}>{item}</li>)}</ul></dd></div>
-            <div><dt>休日・休暇</dt><dd><ul>{r.holidays.map((item) => <li key={item}>{item}</li>)}</ul></dd></div>
-            <div><dt>福利厚生</dt><dd><ul className="two-column-list">{r.benefits.map((item) => <li key={item}>{item}</li>)}</ul></dd></div>
+            <div><dt>職種</dt><dd><Ja>{r.position}</Ja></dd></div>
+            <div><dt>雇用形態</dt><dd><Ja>{`${r.employment}（${r.categories.join("・")}）`}</Ja></dd></div>
+            <div><dt>給与</dt><dd><strong>{r.salary}</strong><ul>{r.salaryNotes.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></dd></div>
+            <div><dt>勤務時間</dt><dd><ul>{r.hours.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></dd></div>
+            <div><dt>休日・休暇</dt><dd><ul>{r.holidays.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></dd></div>
+            <div><dt>福利厚生</dt><dd><ul className="two-column-list">{r.benefits.map((item) => <li key={item}><Ja>{item}</Ja></li>)}</ul></dd></div>
           </dl>
         </div>
       </section>
@@ -147,7 +148,7 @@ export default function RecruitPage() {
       <section className="section pale">
         <div className="container">
           <SectionHeading eyebrow="採用について" title="よくある質問" />
-          <div className="faq-list">{recruitFaqs.map((item) => <details key={item.q}><summary>{item.q}</summary><p>{item.a}</p></details>)}</div>
+          <div className="faq-list">{recruitFaqs.map((item) => <details key={item.q}><summary><Ja>{item.q}</Ja></summary><p><Ja>{item.a}</Ja></p></details>)}</div>
         </div>
       </section>
 
@@ -167,8 +168,8 @@ export default function RecruitPage() {
         <div className="container reservation-inner">
           <div>
             <p className="eyebrow">応募・院内見学</p>
-            <h2>応募受付について</h2>
-            <p>お電話またはInstagramのDMからご相談・お申し込みいただけます。院内見学のご希望もお気軽にお問い合わせください。</p>
+            <h2><Ja>応募受付について</Ja></h2>
+            <p><Ja>お電話またはInstagramのDMからご相談・お申し込みいただけます。院内見学のご希望もお気軽にお問い合わせください。</Ja></p>
           </div>
           <div className="reservation-actions">
             <a className="button button-reserve" href={`tel:${siteConfig.phone}`}><span className="button-kicker">お電話でのご相談</span><span>{siteConfig.phone}</span></a>

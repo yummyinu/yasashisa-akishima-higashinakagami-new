@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { Ja } from "@/components/Ja";
 
 export function SectionHeading({ eyebrow, title, lead, align = "left" }: { eyebrow: string; title: string; lead?: string; align?: "left" | "center" }) {
   return (
     <div className={`section-heading ${align === "center" ? "is-center" : ""}`}>
       <p className="eyebrow">{eyebrow}</p>
-      <h2>{title}</h2>
-      {lead && <p className="section-lead">{lead}</p>}
+      <h2><Ja>{title}</Ja></h2>
+      {lead && <p className="section-lead"><Ja>{lead}</Ja></p>}
     </div>
   );
 }
@@ -16,8 +17,8 @@ export function PageHero({ eyebrow, title, lead }: { eyebrow: string; title: Rea
     <div className="page-hero">
       <div className="container">
         <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p>{lead}</p>
+        <h1>{typeof title === "string" ? <Ja>{title}</Ja> : title}</h1>
+        <p><Ja>{lead}</Ja></p>
       </div>
     </div>
   );
@@ -29,8 +30,8 @@ export function ReservationCTA() {
       <div className="container reservation-inner">
         <div>
           <p className="eyebrow">ご予約・ご相談</p>
-          <h2>気になる不調を、まずはご相談ください</h2>
-          <p>お身体の状態を丁寧に伺い、無理のない施術をご提案します。</p>
+          <h2><Ja>気になる不調を、まずはご相談ください</Ja></h2>
+          <p><Ja>お身体の状態を丁寧に伺い、無理のない施術をご提案します。</Ja></p>
         </div>
         <div className="reservation-actions">
           <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">
