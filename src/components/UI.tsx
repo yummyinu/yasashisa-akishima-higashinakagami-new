@@ -11,7 +11,7 @@ export function SectionHeading({ eyebrow, title, lead, align = "left" }: { eyebr
   );
 }
 
-export function PageHero({ eyebrow, title, lead }: { eyebrow: string; title: string; lead: string }) {
+export function PageHero({ eyebrow, title, lead }: { eyebrow: string; title: React.ReactNode; lead: string }) {
   return (
     <div className="page-hero">
       <div className="container">
