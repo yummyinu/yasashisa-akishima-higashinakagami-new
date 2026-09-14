@@ -99,13 +99,13 @@ p, li, dd, figcaption { text-wrap: pretty; }
 .intro-lead p { max-width: 62ch; margin: 0 auto; color: var(--ink-soft); font-weight: 600; text-align: center; font-size: 1.05rem; }
 
 /* Fact band */
-.fact-band { background: var(--blue-deep); color: #fff; }
-.fact-row { display: flex; flex-wrap: wrap; }
-.fact-row li { flex: 1 1 0; display: flex; align-items: center; justify-content: center; gap: .75rem; min-width: 150px; padding: 1.6rem 1rem; border-left: 1px solid rgba(255,255,255,.18); text-align: left; }
-.fact-row li:first-child { border-left: 0; }
-.fact-row svg { width: 1.5rem; height: 1.5rem; flex: 0 0 auto; color: #ffd7bd; }
-.fact-row small { display: block; color: #bcd7ec; font-size: .68rem; }
-.fact-row strong { display: block; font-size: clamp(1rem, 1.4vw, 1.2rem); }
+.fact-band { padding: clamp(1.6rem, 3vw, 2.4rem) 0; background: var(--blue-pale); }
+.fact-row { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: .8rem; list-style: none; margin: 0; padding: 0; }
+.fact-row li { display: flex; flex-direction: column; align-items: center; gap: .5rem; padding: 1.3rem .7rem; border-radius: var(--radius-md); background: #fff; box-shadow: var(--shadow-tight); text-align: center; }
+.fact-icon { width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 50%; background: var(--blue-mist); color: var(--blue); }
+.fact-icon svg { width: 1.35rem; height: 1.35rem; }
+.fact-row small { display: block; color: var(--ink-soft); font-size: .7rem; }
+.fact-row strong { display: block; color: var(--blue-deep); font-size: clamp(.95rem, 1.3vw, 1.05rem); }
 
 /* Trust / symptom tags */
 .trust-block { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
@@ -328,7 +328,7 @@ p, li, dd, figcaption { text-wrap: pretty; }
   .mobile-menu.is-open { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
   .mobile-menu a { padding: .8rem .65rem; border-bottom: 1px solid var(--hairline); font-weight: 800; }
   .mobile-menu a[aria-current="page"] { border-left: 4px solid var(--blue); background: var(--blue-pale); color: var(--blue-deep); }
-  .fact-row li { min-width: 45%; }
+  .fact-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .trust-block { grid-template-columns: 1fr; }
   .link-cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .value-row, .treatment-cards, .note-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -356,9 +356,8 @@ p, li, dd, figcaption { text-wrap: pretty; }
   .hero-photo-copy h1 { font-size: clamp(1.7rem, 8vw, 2.1rem); }
   .btn-row .btn { flex: 1; padding-inline: .9rem; font-size: .86rem; }
   .intro-lead p { font-size: .95rem; }
-  .fact-row { flex-direction: column; }
-  .fact-row li { border-left: 0; border-top: 1px solid rgba(255,255,255,.18); justify-content: flex-start; }
-  .fact-row li:first-child { border-top: 0; }
+  .fact-row { gap: .6rem; }
+  .fact-row li { padding: 1rem .5rem; }
   .link-cards { grid-template-columns: repeat(2, minmax(0,1fr)); gap: .7rem; }
   .value-row, .treatment-cards, .note-grid { grid-template-columns: 1fr; }
   .trust-tags { gap: .5rem; }

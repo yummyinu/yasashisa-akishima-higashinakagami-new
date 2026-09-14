@@ -56,10 +56,10 @@ export default function Home() {
 
       <section className="fact-band" aria-label="医院の特徴">
         <ul className="container fact-row">
-          <li><MapPinIcon /><div><small>東中神駅南口</small><strong>徒歩4分</strong></div></li>
-          <li><ClockIcon /><div><small>受付時間</small><strong>20時まで</strong></div></li>
-          <li><CalendarIcon /><div><small>当日予約</small><strong>空き状況を確認</strong></div></li>
-          <li><SmartphoneIcon /><div><small>Web予約</small><strong>24時間受付</strong></div></li>
+          <li><span className="fact-icon"><MapPinIcon /></span><small>東中神駅南口</small><strong>徒歩4分</strong></li>
+          <li><span className="fact-icon"><ClockIcon /></span><small>受付時間</small><strong>20時まで</strong></li>
+          <li><span className="fact-icon"><CalendarIcon /></span><small>当日予約</small><strong>空き状況を確認</strong></li>
+          <li><span className="fact-icon"><SmartphoneIcon /></span><small>Web予約</small><strong>24時間受付</strong></li>
         </ul>
       </section>
 
