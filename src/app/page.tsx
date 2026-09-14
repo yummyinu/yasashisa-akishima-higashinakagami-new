@@ -39,7 +39,7 @@ export default function Home() {
         <div className="hero-photo-copy">
           <div className="container">
             <p className="tag on-dark">昭島市・東中神の整骨院</p>
-            <h1><Ja>話を聞くことから、はじめます</Ja></h1>
+            <h1><Ja>話を聞くことからはじめます</Ja></h1>
             <div className="btn-row">
               <a className="btn book" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
               <Link className="btn on-dark" href="/first">初めての方へ</Link>
