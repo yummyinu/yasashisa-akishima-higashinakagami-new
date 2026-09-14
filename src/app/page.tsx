@@ -27,20 +27,17 @@ export default function Home() {
   return (
     <>
       <section className="home-hero">
-        <div className="container hero-layout">
-          <div className="hero-content">
-            <p className="hero-kicker"><Ja>地域の皆さまの身体に、やさしく向き合う整骨院</Ja></p>
-            <h1><Ja>つらいところを聞いて、身体の動きを見てから施術します</Ja></h1>
-            <p><Ja>お悩みの背景まで丁寧に伺い、今の状態と施術方針を分かりやすくお伝えします。初めての方も安心してご相談ください。</Ja></p>
-            <div className="hero-actions">
-              <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
-              <Link className="button button-outline" href="/first">初めての方へ</Link>
-            </div>
+        <div className="container hero-text">
+          <p className="eyebrow"><Ja>地域の皆さまの身体に、やさしく向き合う整骨院</Ja></p>
+          <h1><Ja>つらいところを聞いて、身体の動きを見てから施術します</Ja></h1>
+          <p className="hero-lead"><Ja>お悩みの背景まで丁寧に伺い、今の状態と施術方針を分かりやすくお伝えします。初めての方も安心してご相談ください。</Ja></p>
+          <div className="hero-actions">
+            <a className="button button-reserve" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
+            <Link className="button button-outline" href="/first">初めての方へ</Link>
           </div>
-          <div className="hero-visual">
-            <Image src="/images/yasashisa/clinic-original.jpg" alt="青と白を基調とした明るく清潔な院内" fill priority sizes="(max-width: 800px) 100vw, 58vw" />
-            <div className="hero-photo-note"><strong>明るく広い院内</strong><span>施術ベッド10台・駐車場5台</span></div>
-          </div>
+        </div>
+        <div className="hero-visual">
+          <Image src="/images/yasashisa/clinic-original.jpg" alt="青と白を基調とした明るく清潔な院内" fill priority sizes="100vw" />
         </div>
       </section>
 
