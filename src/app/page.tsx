@@ -48,12 +48,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section intro-lead">
-        <div className="container">
-          <p><Ja>日常の姿勢や生活習慣まで確認しながら、今の状態に合わせた施術をわかりやすくご説明します。初めての方もお気軽にご相談ください。</Ja></p>
-        </div>
-      </section>
-
       <section className="fact-band" aria-label="医院の特徴">
         <ul className="container fact-row">
           <li><span className="fact-icon"><MapPinIcon /></span><small>東中神駅南口</small><strong>徒歩4分</strong></li>
@@ -61,6 +55,12 @@ export default function Home() {
           <li><span className="fact-icon"><CalendarIcon /></span><small>当日予約</small><strong>空き状況を確認</strong></li>
           <li><span className="fact-icon"><SmartphoneIcon /></span><small>Web予約</small><strong>24時間受付</strong></li>
         </ul>
+      </section>
+
+      <section className="section intro-lead">
+        <div className="container">
+          <p><Ja>日常の姿勢や生活習慣まで確認しながら、今の状態に合わせた施術をわかりやすくご説明します。初めての方もお気軽にご相談ください。</Ja></p>
+        </div>
       </section>
 
       <section className="section">
