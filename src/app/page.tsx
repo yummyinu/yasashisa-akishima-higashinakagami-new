@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual">
-            <Image src="/images/yasashisa/clinic-hero-generated.webp" alt="青と白を基調とした明るく清潔な院内" fill priority sizes="(max-width: 800px) 100vw, 58vw" />
+            <Image src="/images/yasashisa/clinic-original.jpg" alt="青と白を基調とした明るく清潔な院内" fill priority sizes="(max-width: 800px) 100vw, 58vw" />
             <div className="hero-photo-note"><strong>明るく広い院内</strong><span>施術ベッド10台・駐車場5台</span></div>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function Home() {
             <div className="access-summary"><p><strong>所在地</strong><Ja>{siteConfig.address}</Ja></p><p><strong>電話番号</strong><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></p><p><strong>診療時間</strong>9:00〜12:30／15:00〜20:00</p><p><strong>定休日</strong>年末年始</p></div>
             <div className="inline-actions"><Link className="button" href="/access">アクセス詳細</Link><a className="button button-outline" href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer">Googleマップ ↗</a></div>
           </div>
-          <Image src="/images/yasashisa/clinic-original.jpg" alt="やさしさ 昭島東中神整骨院の院内" width={720} height={540} />
+          <Image src="/images/yasashisa/kids-space.jpg" alt="やさしさ 昭島東中神整骨院の待合・キッズスペース" width={720} height={540} />
         </div>
       </section>
 
