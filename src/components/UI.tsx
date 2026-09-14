@@ -6,7 +6,7 @@ import { Ja } from "@/components/Ja";
 export function SectionHeading({ eyebrow, title, lead, align }: { eyebrow: string; title: string; lead?: string; align?: "center" }) {
   return (
     <div className={`head ${align === "center" ? "center" : ""}`}>
-      <p className="tag">{eyebrow}</p>
+      <p className="tag"><Ja>{eyebrow}</Ja></p>
       <h2><Ja>{title}</Ja></h2>
       {lead && <p><Ja>{lead}</Ja></p>}
     </div>

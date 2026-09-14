@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero, Breadcrumb, ReservationCTA } from "@/components/UI";
+import { Ja } from "@/components/Ja";
 
 export const metadata: Metadata = {
   title: "院内紹介",
@@ -29,7 +30,7 @@ export default function GalleryPage() {
           {photos.map((p) => (
             <figure key={p.src} className={p.wide ? "wide" : ""}>
               <Image src={p.src} alt={p.alt} fill sizes="(max-width: 760px) 50vw, 33vw" />
-              <figcaption>{p.alt}</figcaption>
+              <figcaption><Ja>{p.alt}</Ja></figcaption>
             </figure>
           ))}
         </div>

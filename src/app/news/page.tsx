@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero, Breadcrumb } from "@/components/UI";
+import { Ja } from "@/components/Ja";
 
 export const metadata: Metadata = {
   title: "お知らせ",
@@ -15,8 +16,8 @@ export default function NewsPage() {
       <section className="section">
         <div className="container">
           <div className="empty-box">
-            <h2>現在お知らせはありません</h2>
-            <p>新しいお知らせがあり次第、こちらのページに掲載します。</p>
+            <h2><Ja>現在お知らせはありません</Ja></h2>
+            <p><Ja>新しいお知らせがあり次第、こちらのページに掲載します。</Ja></p>
           </div>
         </div>
       </section>

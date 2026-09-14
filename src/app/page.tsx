@@ -33,23 +33,24 @@ const reasons = [
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="tag">昭島市・東中神の整骨院</p>
-            <h1><Ja>痛みの理由を確かめてから、施術方針をお伝えします</Ja></h1>
-            <p className="lead"><Ja>日常の姿勢や生活習慣まで確認しながら、今の状態に合わせた施術をわかりやすくご説明します。初めての方もお気軽にご相談ください。</Ja></p>
+      <section className="hero-photo">
+        <Image src="/images/yasashisa/counseling.jpg" alt="やさしさ 昭島東中神整骨院でスタッフが患者様のお話を伺う様子" fill priority sizes="100vw" />
+        <div className="hero-photo-scrim" />
+        <div className="hero-photo-copy">
+          <div className="container">
+            <p className="tag on-dark">昭島市・東中神の整骨院</p>
+            <h1><Ja>話を聞くことから、はじめます</Ja></h1>
             <div className="btn-row">
               <a className="btn book" href={siteConfig.reservationUrl} target="_blank" rel="noopener noreferrer">Web予約する ↗</a>
-              <Link className="btn ghost" href="/first">初めての方へ</Link>
+              <Link className="btn on-dark" href="/first">初めての方へ</Link>
             </div>
           </div>
-          <div className="hero-frame">
-            <div className="hero-frame-photo">
-              <Image src="/images/yasashisa/clinic-original.jpg" alt="やさしさ 昭島東中神整骨院の明るい院内" fill priority sizes="(max-width: 1100px) 90vw, 40vw" />
-            </div>
-            <div className="hero-frame-tag"><strong>施術ベッド10台</strong><span>駐車場5台完備</span></div>
-          </div>
+        </div>
+      </section>
+
+      <section className="section intro-lead">
+        <div className="container">
+          <p><Ja>日常の姿勢や生活習慣まで確認しながら、今の状態に合わせた施術をわかりやすくご説明します。初めての方もお気軽にご相談ください。</Ja></p>
         </div>
       </section>
 
