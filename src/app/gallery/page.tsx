@@ -1,7 +1,40 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Breadcrumb, PageHero, ReservationCTA } from "@/components/UI";
-import { Ja } from "@/components/Ja";
-import { gallery } from "@/data/site";
-export const metadata: Metadata = { title: "院内紹介", description: "やさしさ 昭島東中神整骨院の院内紹介です。明るく清潔な院内、施術スペース、キッズスペースをご紹介します。", alternates: { canonical: "/gallery" } };
-export default function GalleryPage() { return <><PageHero eyebrow="院内紹介" title="院内紹介" lead="青と白を基調とした、広く明るい院内です。初めての方にも落ち着いて過ごしていただける空間を整えています。" /><Breadcrumb current="院内紹介" path="/gallery" /><section className="section"><div className="container gallery-page">{gallery.map((item, i) => <figure key={item.src} className={i === 0 || i === 3 ? "gallery-large" : ""}><Image src={item.src} alt={item.alt} width={900} height={675} sizes={i === 0 || i === 3 ? "(max-width: 760px) 100vw, 1140px" : "(max-width: 760px) 100vw, 570px"} /><figcaption><Ja>{item.alt}</Ja></figcaption></figure>)}</div></section><section className="section pale"><div className="container info-grid"><article><h2><Ja>施術ベッド10台</Ja></h2><p><Ja>広さにゆとりのある院内で、落ち着いて施術を受けていただけます。</Ja></p></article><article><h2><Ja>カーテンで仕切れる空間</Ja></h2><p><Ja>周囲が気になる方にも配慮し、施術スペースを仕切れるようにしています。</Ja></p></article><article><h2><Ja>キッズスペース</Ja></h2><p><Ja>お子さま連れの方も来院しやすい環境をご用意しています。</Ja></p></article></div></section><ReservationCTA /></>; }
+import { PageHero, Breadcrumb, ReservationCTA } from "@/components/UI";
+
+export const metadata: Metadata = {
+  title: "院内紹介",
+  description: "青と白を基調とした、明るく清潔なやさしさ 昭島東中神整骨院の院内の様子をご紹介します。",
+  alternates: { canonical: "/gallery" },
+};
+
+const photos = [
+  { src: "/images/yasashisa/clinic-original.jpg", alt: "施術ベッドが並ぶ明るい院内", wide: true },
+  { src: "/images/yasashisa/kids-space.jpg", alt: "院内のキッズスペース" },
+  { src: "/images/yasashisa/counseling.jpg", alt: "問診の様子" },
+  { src: "/images/yasashisa/neck-treatment.jpg", alt: "首まわりの施術の様子" },
+  { src: "/images/yasashisa/back-treatment.jpg", alt: "背中の施術の様子" },
+  { src: "/images/yasashisa/back-treatment-2.jpg", alt: "施術ベッドでの施術の様子" },
+  { src: "/images/yasashisa/pelvis-treatment.jpg", alt: "姿勢を確認しながらの施術の様子" },
+  { src: "/images/yasashisa/stretch-treatment.jpg", alt: "脚のストレッチ施術の様子" },
+];
+
+export default function GalleryPage() {
+  return (
+    <>
+      <PageHero eyebrow="院内紹介" title="院内紹介" lead="青と白を基調とした、広く明るい院内です。初めての方にも落ち着いて過ごしていただける空間を整えています。" />
+      <Breadcrumb current="院内紹介" path="/gallery" />
+      <section className="section">
+        <div className="container gallery-wall">
+          {photos.map((p) => (
+            <figure key={p.src} className={p.wide ? "wide" : ""}>
+              <Image src={p.src} alt={p.alt} fill sizes="(max-width: 760px) 50vw, 33vw" />
+              <figcaption>{p.alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+      <ReservationCTA />
+    </>
+  );
+}

@@ -1,5 +1,32 @@
 import type { Metadata } from "next";
-import { Breadcrumb, PageHero } from "@/components/UI";
-import { Ja } from "@/components/Ja";
-export const metadata: Metadata = { title: "プライバシーポリシー", description: "やさしさ 昭島東中神整骨院の個人情報保護方針です。", alternates: { canonical: "/privacy" } };
-export default function PrivacyPage() { return <><PageHero eyebrow="個人情報保護方針" title={<><span className="nobreak">プライバシー</span><span className="nobreak">ポリシー</span></>} lead="当院における個人情報の取り扱いについてご案内します。" /><Breadcrumb current="プライバシーポリシー" path="/privacy" /><section className="section"><div className="container legal"><h2><Ja>個人情報の取り扱い</Ja></h2><p><Ja>当院は、ご予約やお問い合わせ、施術に必要な範囲で取得した個人情報を適切に管理し、ご本人の同意なく目的外に利用しません。</Ja></p><h2><Ja>利用目的</Ja></h2><p><Ja>取得した情報は、ご予約の管理、施術の提供、必要なご連絡、サービス改善のために利用します。</Ja></p><h2><Ja>アクセス解析について</Ja></h2><p><Ja>当サイトでは、サイトの利用状況を把握し、内容や利便性、表示速度を改善するため、Vercel Web AnalyticsおよびVercel Speed Insightsを利用しています。</Ja></p><p><Ja>これにより、閲覧されたページ、参照元、利用端末、ブラウザ、国または地域、表示速度などの情報が、個人を直接特定しない集計情報として収集される場合があります。Vercel Web Analyticsは第三者Cookieを使用しません。</Ja></p><p><Ja>当サイトでは、アクセス解析を通じて氏名、電話番号、メールアドレス、予約内容などを意図的に収集しません。</Ja></p><h2><Ja>第三者への提供</Ja></h2><p><Ja>法令に基づく場合を除き、ご本人の同意なく個人情報を第三者へ提供しません。</Ja></p><h2><Ja>安全管理</Ja></h2><p><Ja>個人情報への不正アクセス、紛失、漏えいを防ぐため、必要かつ適切な安全管理措置を講じます。</Ja></p><h2><Ja>見直し</Ja></h2><p><Ja>本方針は、法令や運用状況に応じて内容を見直すことがあります。</Ja></p></div></section></>; }
+import { PageHero, Breadcrumb } from "@/components/UI";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー",
+  description: "やさしさ 昭島東中神整骨院における個人情報の取り扱いについてご案内します。",
+  alternates: { canonical: "/privacy" },
+};
+
+export default function PrivacyPage() {
+  return (
+    <>
+      <PageHero eyebrow="プライバシーポリシー" title="プライバシーポリシー" lead="ご来院・お問い合わせに際してお預かりする個人情報の取り扱いについて定めます。" />
+      <Breadcrumb current="プライバシーポリシー" path="/privacy" />
+      <section className="section">
+        <div className="container">
+          <div className="legal-box">
+            <h2>個人情報の利用目的</h2>
+            <p>ご予約・ご来院時にお預かりする個人情報は、施術のご提供、ご連絡、料金のお支払いに関する対応のために利用します。</p>
+            <h2>個人情報の第三者提供</h2>
+            <p>法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。</p>
+            <h2>個人情報の管理</h2>
+            <p>お預かりした個人情報は、紛失・漏えい・改ざんを防止するため、適切な安全管理措置を講じたうえで管理します。</p>
+            <h2>お問い合わせ窓口</h2>
+            <p>個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。<br />{siteConfig.company}　{siteConfig.name}　{siteConfig.phone}</p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

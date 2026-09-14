@@ -1,5 +1,25 @@
 import type { Metadata } from "next";
-import { Breadcrumb, PageHero } from "@/components/UI";
-import { Ja } from "@/components/Ja";
-export const metadata: Metadata = { title: "お知らせ", description: "やさしさ 昭島東中神整骨院からのお知らせです。", alternates: { canonical: "/news" } };
-export default function NewsPage() { return <><PageHero eyebrow="医院からのご案内" title="お知らせ" lead="診療日の変更や院からのご案内をお知らせします。" /><Breadcrumb current="お知らせ" path="/news" /><section className="section"><div className="container empty-state"><p className="eyebrow">最新情報</p><h2><Ja>現在、お知らせはありません</Ja></h2><p><Ja>最新情報はInstagramでも発信しています。</Ja></p><a className="button button-outline" href="https://www.instagram.com/akishimazhengtiyuan/" target="_blank" rel="noopener noreferrer" aria-label="Instagramを見る（外部サイト）">Instagramを見る <span aria-hidden="true">↗</span></a></div></section></>; }
+import { PageHero, Breadcrumb } from "@/components/UI";
+
+export const metadata: Metadata = {
+  title: "お知らせ",
+  description: "やさしさ 昭島東中神整骨院からのお知らせ一覧です。",
+  alternates: { canonical: "/news" },
+};
+
+export default function NewsPage() {
+  return (
+    <>
+      <PageHero eyebrow="お知らせ" title="お知らせ" lead="休診日や院内からのお知らせをこちらに掲載します。" />
+      <Breadcrumb current="お知らせ" path="/news" />
+      <section className="section">
+        <div className="container">
+          <div className="empty-box">
+            <h2>現在お知らせはありません</h2>
+            <p>新しいお知らせがあり次第、こちらのページに掲載します。</p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

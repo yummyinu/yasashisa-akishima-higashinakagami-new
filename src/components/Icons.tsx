@@ -21,3 +21,5 @@ export const CalendarIcon = (props: IconProps) => <IconBase {...props}><rect x="
 export const SmartphoneIcon = (props: IconProps) => <IconBase {...props}><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/></IconBase>;
 export const CarIcon = (props: IconProps) => <IconBase {...props}><path d="m5 11 1.5-4h11l1.5 4M3 14a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v4H3Z"/><path d="M5 18v2M19 18v2M7 15h.01M17 15h.01"/></IconBase>;
 export const PhoneIcon = (props: IconProps) => <IconBase {...props}><path d="M4 5a1 1 0 0 1 1-1h2.5a1 1 0 0 1 1 .8l.7 3.2a1 1 0 0 1-.5 1.1L7 10c.9 2.6 3 4.7 5.6 5.6l1-1.7a1 1 0 0 1 1.1-.5l3.2.7a1 1 0 0 1 .8 1V18a1 1 0 0 1-1 1h-1C9.6 19 5 14.4 5 8V6Z"/></IconBase>;
+export const CheckIcon = (props: IconProps) => <IconBase {...props}><path d="m5 12 5 5L20 7"/></IconBase>;
+export const InstagramIcon = (props: IconProps) => <IconBase {...props}><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><path d="M17.5 6.5h.01"/></IconBase>;

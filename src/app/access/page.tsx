@@ -1,7 +1,35 @@
 import type { Metadata } from "next";
-import { Breadcrumb, PageHero, ReservationCTA, SectionHeading } from "@/components/UI";
+import { PageHero, Breadcrumb, ReservationCTA } from "@/components/UI";
 import { Ja } from "@/components/Ja";
 import { siteConfig } from "@/config/site";
-export const metadata: Metadata = { title: "アクセス", description: "東中神駅南口から徒歩4分。住所、道順、受付時間、駐車場をご案内します。", alternates: { canonical: "/access" } };
-const mapEmbedUrl = "https://www.google.com/maps?q=%E3%80%92196-0034%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%98%AD%E5%B3%B6%E5%B8%82%E7%8E%89%E5%B7%9D%E7%94%BA3-18-13&output=embed";
-export default function AccessPage() { return <><PageHero eyebrow="所在地・交通案内" title="アクセス" lead="東中神駅南口から徒歩4分。院の斜向かいに5台分の駐車場があります。" /><Breadcrumb current="アクセス" path="/access" /><section className="section"><div className="container access-grid"><div><SectionHeading eyebrow="医院情報" title="基本情報" /><dl className="access-data"><div><dt>所在地</dt><dd><Ja>{siteConfig.address}</Ja></dd></div><div><dt>電話番号</dt><dd><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></dd></div><div><dt>最寄り駅</dt><dd><Ja>東中神駅 徒歩4分／中神駅 徒歩8分／西立川駅 徒歩15分</Ja></dd></div><div><dt>受付時間</dt><dd>9:00〜12:30／15:00〜20:00</dd></div><div><dt>定休日</dt><dd>年末年始</dd></div><div><dt>駐車場</dt><dd><Ja>5台（院の斜向かい）</Ja></dd></div></dl><a className="button" href={siteConfig.mapUrl} target="_blank" rel="noopener noreferrer" aria-label="Googleマップで所在地を開く（外部サイト）">Googleマップで開く <span aria-hidden="true">↗</span></a></div><div className="map-frame"><iframe title="やさしさ 昭島東中神整骨院の地図" src={mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section><section className="section pale"><div className="container route"><SectionHeading eyebrow="駅からの道順" title="東中神駅からの道順" /><ol><li><span>01</span><p><Ja>東中神駅南口を出て、右へ約100m進みます。</Ja></p></li><li><span>02</span><p><Ja>交番のある角を右折し、突き当たりまで進みます。</Ja></p></li><li><span>03</span><p><Ja>突き当たりを左折し、約200m進むと当院があります。</Ja></p></li></ol></div></section><ReservationCTA /></>; }
+
+export const metadata: Metadata = {
+  title: "アクセス",
+  description: "やさしさ 昭島東中神整骨院へのアクセス。東中神駅南口から徒歩4分、駐車場5台完備です。",
+  alternates: { canonical: "/access" },
+};
+
+export default function AccessPage() {
+  return (
+    <>
+      <PageHero eyebrow="アクセス" title="アクセス" lead="東中神駅南口から徒歩4分。お車でお越しの際は、院の斜向かいの駐車場をご利用ください。" />
+      <Breadcrumb current="アクセス" path="/access" />
+      <section className="section">
+        <div className="container">
+          <dl className="data-list">
+            <div><dt>所在地</dt><dd><Ja>{siteConfig.address}</Ja></dd></div>
+            <div><dt>最寄駅</dt><dd>JR青梅線 東中神駅 南口より徒歩4分</dd></div>
+            <div><dt>駐車場</dt><dd>院の斜向かいに5台分ご用意しています</dd></div>
+            <div><dt>電話番号</dt><dd><a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a></dd></div>
+            <div><dt>診療時間</dt><dd>9:00〜12:30／15:00〜20:00</dd></div>
+            <div><dt>定休日</dt><dd>年末年始</dd></div>
+          </dl>
+          <div className="map-frame">
+            <iframe title="やさしさ 昭島東中神整骨院の地図" src={`https://www.google.com/maps?q=${encodeURIComponent(siteConfig.address)}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          </div>
+        </div>
+      </section>
+      <ReservationCTA />
+    </>
+  );
+}
