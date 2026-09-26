@@ -31,10 +31,10 @@ export function Footer() {
           <Link href="/news">お知らせ</Link>
           <Link href="/privacy">プライバシーポリシー</Link>
           <a href={siteConfig.instagram.profileUrl} target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a href={siteConfig.kujiraUrl} target="_blank" rel="noopener noreferrer">高崎のくじら整骨院はこちら ↗</a>
         </nav>
       </div>
       <p className="copyright">© {new Date().getFullYear()} {siteConfig.name}</p>
     </footer>
   );
 }
-

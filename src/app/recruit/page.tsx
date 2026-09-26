@@ -30,7 +30,7 @@ export default function RecruitPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <div className="recruit-hero">
         <div className="container">
-          <p className="tag">採用情報</p>
+          <p className="tag on-dark">採用情報</p>
           <h1><Ja>好きで溢れる世界を、仲間とつくる。</Ja></h1>
           <p><Ja>株式会社フチでは、経験や年齢だけではなく「この人と一緒に働きたいと思えるか」を大切に採用を行っています。</Ja></p>
           <div className="stat-row" style={{ marginTop: "2.5rem" }}>
@@ -60,6 +60,7 @@ export default function RecruitPage() {
             <SectionHeading eyebrow="働く環境" title="研修体制と職場の様子" />
             <ul className="plain-list">
               {recruitData.workplace.map((item) => <li key={item}><Ja>{item}</Ja></li>)}
+              <li><Ja>運営会社の株式会社フチは、群馬県高崎市の</Ja><a href={siteConfig.kujiraUrl} target="_blank" rel="noopener noreferrer" className="nobreak">くじら整骨院&nbsp;↗</a><Ja>も運営しています</Ja></li>
             </ul>
           </div>
           <div className="opportunity-box">

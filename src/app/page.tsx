@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { InstagramSection } from "@/components/instagram/InstagramSection";
 import { FAQAccordion } from "@/components/FAQAccordion";
-import { ReservationCTA, SectionHeading } from "@/components/UI";
+import { KujiraLink, ReservationCTA, SectionHeading } from "@/components/UI";
 import { Ja } from "@/components/Ja";
 import { concerns, faqs, gallery, treatments } from "@/data/site";
 import { recruitData } from "@/data/recruit";
@@ -131,6 +131,8 @@ export default function Home() {
           <Image src="/images/yasashisa/kids-space.jpg" alt="やさしさ 昭島東中神整骨院の待合・キッズスペース" width={720} height={540} />
         </div>
       </section>
+
+      <KujiraLink />
 
       <section className="section">
         <div className="container">

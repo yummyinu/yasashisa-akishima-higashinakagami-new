@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PageHero, Breadcrumb, ReservationCTA } from "@/components/UI";
+import { PageHero, Breadcrumb, ReservationCTA, KujiraLink } from "@/components/UI";
 import { Ja } from "@/components/Ja";
 import { siteConfig } from "@/config/site";
 
@@ -29,6 +29,7 @@ export default function AccessPage() {
           </div>
         </div>
       </section>
+      <KujiraLink flushTop />
       <ReservationCTA />
     </>
   );

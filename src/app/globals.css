@@ -178,6 +178,19 @@ p, li, dd, figcaption { text-wrap: pretty; }
 .join-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .6rem; margin: 0 0 1.6rem; padding: 0; list-style: none; }
 .join-list li { padding: .7rem .9rem; border-radius: var(--radius-sm); background: rgba(255,255,255,.12); font-weight: 700; font-size: .88rem; }
 
+/* Sister clinic link (KujiraLink) */
+.kujira-link-section.flush-top { padding-top: 0; }
+.kujira-link { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); overflow: hidden; border-radius: var(--radius-lg); background: linear-gradient(120deg, var(--blue-deep), var(--blue)); color: #fff; transition: transform .18s ease; }
+.kujira-link:hover { transform: translateY(-3px); }
+.kujira-link-photo { position: relative; min-height: 320px; }
+.kujira-link-photo > img:first-child { object-fit: cover; }
+.kujira-link-logo { position: absolute; z-index: 1; left: 1.1rem; bottom: 1.1rem; width: 88px; height: 88px; border: 3px solid #fff; border-radius: 50%; }
+.kujira-link-body { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; padding: clamp(1.8rem, 4vw, 3.4rem); }
+.kujira-link-body .tag { margin: 0; }
+.kujira-link-body strong { font-size: clamp(1.45rem, 2.6vw, 2.1rem); line-height: 1.35; letter-spacing: .02em; }
+.kujira-link .btn { margin-top: .4rem; background: #fff; border-color: #fff; color: var(--blue-deep); white-space: normal; text-align: center; }
+.kujira-link:hover .btn { background: var(--blue-mist); border-color: var(--blue-mist); }
+
 /* Reservation CTA */
 .book-cta { padding: clamp(3rem, 6vw, 5rem) 0; background: var(--blue-mist); border-top: 1px solid var(--hairline); }
 .book-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; }
@@ -291,6 +304,8 @@ p, li, dd, figcaption { text-wrap: pretty; }
 .plain-list { display: grid; gap: .6rem; }
 .plain-list li { position: relative; padding: .8rem .9rem .8rem 2.6rem; border-bottom: 1px solid var(--hairline); }
 .plain-list li::before { content: "✓"; position: absolute; left: .85rem; color: var(--coral); font-weight: 900; }
+.plain-list a { color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.plain-list a:hover { color: var(--coral); }
 .pill-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .55rem; }
 .pill-list li { padding: .65rem .8rem; border: 1px solid var(--hairline); border-radius: var(--radius-sm); background: var(--blue-pale); font-weight: 700; font-size: .9rem; }
 .opportunity-box { padding: clamp(1.6rem, 4vw, 2.4rem); border-radius: var(--radius-lg); background: var(--blue-pale); }
@@ -369,6 +384,10 @@ p, li, dd, figcaption { text-wrap: pretty; }
   .visit-panel img { order: -1; }
   .visit-facts p { grid-template-columns: 6.2rem 1fr; font-size: .86rem; }
   .join-list { grid-template-columns: 1fr; }
+  .kujira-link { grid-template-columns: 1fr; }
+  .kujira-link-photo { min-height: 0; aspect-ratio: 16 / 10; }
+  .kujira-link-logo { width: 68px; height: 68px; }
+  .kujira-link .btn { width: 100%; }
   .menu-detail article:nth-child(even) .photo { order: 0; }
   .instagram-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: .65rem; }
   .instagram-card { padding: .35rem .35rem .65rem; }
