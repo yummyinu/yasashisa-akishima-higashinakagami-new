@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "042-519-1277",
   mapUrl: "https://www.google.com/maps/search/?api=1&query=%E3%82%84%E3%81%95%E3%81%97%E3%81%95%E6%98%AD%E5%B3%B6%E6%9D%B1%E4%B8%AD%E7%A5%9E%E6%95%B4%E9%AA%A8%E9%99%A2",
   reservationUrl: "https://beauty.hotpepper.jp/kr/slnH000749527/",
-  kujiraUrl: "https://kujira-seikotsuin.com/",
+  kujiraUrl: "https://www.takasaki-kujiraseikotsuin.com/",
   instagram: {
     username: "akishimazhengtiyuan",
     profileUrl: "https://www.instagram.com/akishimazhengtiyuan/",
